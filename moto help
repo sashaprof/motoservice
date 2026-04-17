@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Index Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #f4f4f4;
+      color: #333;
+    }
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+    h1 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Welcome</h1>
+    <p>This is the starter <code>index.html</code> file for your project.</p>
+  </main>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мотосервис PRO</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: white;
+}
+
+/* ШАПКА */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: rgba(0,0,0,0.8);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  color: orange;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background: orange;
+  color: black;
+}
+
+/* БАННЕР */
+.banner {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1558981806-ec527fa84c39") center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner-content {
+  background: rgba(0,0,0,0.6);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.banner h1 {
+  font-size: 40px;
+  margin: 0;
+  color: orange;
+}
+
+/* СЕКЦИИ */
+section {
+  padding: 80px 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* КНОПКИ */
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.orange {
+  background: orange;
+  color: black;
+}
+
+.green {
+  background: #00c853;
+  color: white;
+}
+
+/* ФОРМА */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: none;
+}
+
+.card {
+  background: #1c1c1c;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+/* ТЕЛЕГРАМ КНОПКА */
+.telegram {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0088cc;
+  padding: 15px;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🏍 Мотосервис PRO</div>
+  <nav>
+    <a href="#services">Услуги</a>
+    <a href="#price">Цены</a>
+    <a href="#booking">Запись</a>
+    <a href="#contact">Контакты</a>
+  </nav>
+</header>
+
+<!-- БАННЕР -->
+<div class="banner">
+  <div class="banner-content">
+    <h1>Ремонт мотоциклов</h1>
+    <p>Карпаты • Альфа • Питбайки • Скутера</p>
+    <a class="btn orange" href="#booking">Записаться</a>
+  </div>
+</div>
+
+<!-- УСЛУГИ -->
+<section id="services">
+<div class="container">
+  <h2>🔧 Услуги</h2>
+  <div class="card">✔ Ремонт двигателя</div>
+  <div class="card">✔ Карбюратор</div>
+  <div class="card">✔ Электрика</div>
+  <div class="card">✔ Ходовая</div>
+</div>
+</section>
+
+<!-- ЦЕНЫ -->
+<section id="price">
+<div class="container">
+  <h2>💰 Цены</h2>
+  <div class="card">Диагностика — 100 грн</div>
+  <div class="card">Настройка карбюратора — 150 грн</div>
+  <div class="card">Ремонт двигателя — от 500 грн</div>
+</div>
+</section>
+
+<!-- ЗАПИСЬ -->
+<section id="booking">
+<div class="container">
+  <h2>📅 Запись на ремонт</h2>
+
+  <input type="text" id="name" placeholder="Ваше имя">
+  <input type="text" id="phone" placeholder="Телефон">
+  <textarea id="problem" placeholder="Что нужно сделать"></textarea>
+
+  <button class="btn green" onclick="saveBooking()">Отправить заявку</button>
+
+  <div id="result"></div>
+</div>
+</section>
+
+<!-- КОНТАКТЫ -->
+<section id="contact">
+<div class="container">
+  <h2>📞 Контакты</h2>
+  <p>Телефон: +380 66 354 82 85</p>
+
+  <a class="btn green"
+     href="https://t.me/motoservice_helper_bot"
+     target="_blank">
+     💬 Написать в Telegram
+  </a>
+</div>
+</section>
+
+<!-- TELEGRAM FLOAT BUTTON -->
+<a class="telegram" href="https://t.me/motoservice_helper_bot" target="_blank">
+💬 TG
+</a>
+
+<script>
+
+const BOT_TOKEN = "8760301368:AAFXeM6kOjh0RhZR0wWm4xMtCIWROJ6OBlI";
+const CHAT_ID = "5663759055";
+
+function saveBooking() {
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let problem = document.getElementById("problem").value;
+
+  if (!name || !phone || !problem) {
+    alert("Заполни все поля!");
+    return;
+  }
+
+  let message =
+`🚨 Новая заявка с сайта:
+👤 Имя: ${name}
+📞 Телефон: ${phone}
+🔧 Проблема: ${problem}`;
+
+  fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(message)}`)
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("result").innerHTML =
+        "<p style='color:lightgreen'>✔ Заявка отправлена в Telegram!</p>";
+    })
+    .catch(error => {
+      alert("Ошибка отправки в Telegram");
+      console.log(error);
+    });
+
+  document.getElementById("name").value = "";
+  document.getElementById("phone").value = "";
+  document.getElementById("problem").value = "";
+}
+</script>
+/body>
+</html> 
